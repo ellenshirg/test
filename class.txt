@@ -1,0 +1,45 @@
+class Student:
+    number = 0
+    def __init__(self, name, age, group, subjects):
+        self.name = name
+        self.age = age
+        self.group = group
+        self.subjects = subjects
+
+    def add_student(self):
+        Student.number += 1
+        print(Student.number)
+
+    def add_subject(self, subject):
+        self.subjects += [subject]
+        print(self.subjects)
+
+class Teacher(Student):
+    def __init__(self, name, age, group, subjects, work_id):
+        self.work_id = work_id
+
+    def teach(self, subject):
+        print(subject + " for " + self.group)
+
+class ZamTeacher(Teacher):
+    def __init__(self, name, age, group, subjects, work_id, teacher_list):
+        self.teacher_list = teacher_list
+
+    def add_teacher(self, new_teacher, teacher_list):
+        new_teacher_name = new_teacher.name
+        teacher_list.append(new_teacher_name)
+        print(teacher_list)
+
+
+mark = Student ("Mark", 18, "15FPL", [])
+mark.add_student()
+kate = Student ("Kate", 18, "15FPL", [])
+kate.add_student()
+
+mark.add_subject('Math')
+['Math']
+
+sveta = Teacher("Sveta", "45", "15FPL", "Math", "34")
+
+ivan = ZamTeacher("Ivan", "67", "15FPL", "English", "43", [])
+ivan.add_teacher(sveta, [])

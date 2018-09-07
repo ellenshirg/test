@@ -1,0 +1,40 @@
+import random
+
+def keys_sort(l):
+    dict = {x : l.count(x) for x in l}
+    keys = dict.keys()
+    new_l = list(keys)
+    if len(new_l) == 1 or len(new_l) <= 0:
+        return new_l
+    k = random.choice(new_l)
+    keys_left = [i for i in new_l if i < k]
+    keys_right = [i for i in new_l if i >= k]
+    sorted_list = keys_sort(keys_left) + keys_sort(keys_right)
+    return sorted_list, dict
+
+def
+    for m in enumerate(sorted_list[:-1]):
+        val = dict[m]
+        return m * val
+    return sorted_list'''
+
+l = [1,1,1,1,1,1,1,5,5,5,5,5,5,5,5,6,8,7,7,7,5,4]
+print(keys_sort(l))
+
+
+
+import random
+
+def quick_sort(l):
+    if len(l) == 1 or len(l) <= 0:
+        return l
+    k = random.choice(l)
+    l_left = [i for i in l if i < k]
+    l_med = [i for i in l if i == k]
+    l_right = [i for i in l if i > k]
+
+    return quick_sort(l_left) +  l_med + quick_sort(l_right)
+
+
+l = [2, 5, 7, 3, 9, 4, 3, 8]
+print(quick_sort(l)) 
