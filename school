@@ -1,0 +1,42 @@
+class School:
+    def __init__(self, number, teachers, rooms, num_students):
+        self.number = number
+        self.teachers = teachers
+        self.rooms = rooms
+        self.num_students = num_students
+
+    def new_teacher(self):
+        name = input('Введите имя нового учителя: ')
+        self.teachers.append(name)
+        print('Новый учитель ', name)
+        print('Все учителя: ',self.teachers)
+
+    def count_students(self):
+        print('У нас ', self.num_students, 'студентов')
+
+    def get_info(self):
+        print('Вся информация о ', self.number)
+        print(self.number)
+        print(self.teachers)
+        print(self.rooms)
+        print(self.num_students)
+
+class Kindergarden:
+    def __init__(self, number, tutors, num_children, toys):
+        self.number = number
+        self.tutors = tutors
+        self.num_children = num_children
+        self.toys = toys
+
+    def new_toy(self, toy_name):
+        self.toy_name = toy_name
+        self.toys.append(toy_name)
+        print(self.toys)
+
+
+class University(School, Kindergarden):
+    def count_campus(self):
+        num_campus = input('Введите количество кампусов: ')
+        print('В ', self.number ,num_campus, 'кампуса')
+
+
