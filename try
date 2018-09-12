@@ -1,0 +1,14 @@
+import school
+
+
+school1 = school.School('152', ['Василькова Мария Ивановна', 'Пупкин Валерий Леонтьевич', 'Петрова Брунгильда Анваровна'], 25, 150)
+kindergarden1 = school.Kindergarden('164', ['Васильева Степана Григорьевна','Иванов Иван Иванович','Козлова Алина Дмитриевна'], 63, ['мячик', 'машинка', 'паззл'])
+university1 = school.University('HSE', ['Зусман Валерий Григорьевич', 'Цветкова Марина Владимировна', 'Фокина Маргарита Андреевна'], 45, 540)
+
+school1.new_teacher()
+school1.count_students()
+kindergarden1.new_toy('скакалка')
+university1.get_info()
+university1.count_campus()
+university1.new_teacher()
+university1.get_info()
